@@ -16,7 +16,8 @@ moviesApp.config(['$routeProvider', function($routeProvider){
 
 moviesApp.controller('moviesController',function($scope, $http){
    $scope.message = "hey"
-    $http.get('http://127.0.0.1:5501/assets/movies.json').then(function(data){
+   // $http.get('http://127.0.0.1:5501/assets/movies.json').then(function(data){
+    $http.get('https://lakhdarwalid.github.io/movieslibrary/assets/movies.json').then(function(data){
             //$scope.mydata = data;
             console.log(data.data);
             $scope.movies = data.data;
