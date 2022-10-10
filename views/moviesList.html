@@ -1,0 +1,12 @@
+<section class="row justify-content-center">
+  <div class="input-group-append">
+    <span class="input-group-text p-2" >Search<input type="text" class="form-control mr-5" ng-model="movieName"></span>
+  </div>
+  <div class="card col-4 m-2" style="width: 10rem;" ng-repeat="movie in movies | filter: { Title: movieName } | orderBy: 'Title'">
+    <img class="card-img-top" src={{movie.Poster}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.Title}}</h5>
+      <p class="card-text">{{movie.Year}}</p>
+    </div>
+  </div>
+</section>
